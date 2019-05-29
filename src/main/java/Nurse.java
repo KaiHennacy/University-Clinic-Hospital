@@ -1,14 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class Nurse extends Medical{
 
-	private int numPatients;
-	private int salary = 50000;
+	
+	Map<String, Patient> patients = new HashMap <String, Patient>();
+	final int SALARY = 50000;
 	
 	public int getNumPatients() {
-		return numPatients;
-	}
-	public void setNumPatients(int numPatients) {
-		this.numPatients = numPatients;
+		return patients.size();
 	}
 	public void drawBlood(Patient pat) {
 		pat.subtractBloodLevel(1);
@@ -16,14 +16,13 @@ public class Nurse extends Medical{
 	public void careFor(Patient pat) {
 		pat.addHealth(1);
 	}
-	public Nurse(int numberOfPatients) {
-		setNumPatients(numberOfPatients);
-
+	public Nurse(String nurseName, int id) {
+		setName(nurseName);
+		setIdNum(id);
+		setSalary(SALARY);
 	}
-	@Override
-	public void pay(int amountToPay) {
-		// TODO Auto-generated method stub
-		
+	public void addPatient(Patient pat) {
+		patients.put(""+pat.getIdNum(), pat);
 	}
 
 }

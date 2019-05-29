@@ -1,5 +1,6 @@
 
-public abstract class Employee extends Program{
+
+public abstract class Employee{
 	
 	protected int salary;
 	protected String name;
@@ -14,10 +15,21 @@ public abstract class Employee extends Program{
 	public int getIdNum() {
 		return idNum;
 	}
-	public boolean isHasBeenPaid() {
+	public void setIdNum(int id) {
+		idNum = id;
+	}
+	public void setName(String employeeName) {
+		name = employeeName;
+	}
+	public void setSalary(int SALARY) {
+		salary = SALARY;
+	}
+	public boolean isPaid() {
 		return hasBeenPaid;
 	}
 	
-	public abstract void pay(int amountToPay);
+	public void pay() {
+		hasBeenPaid = true;
+	}
 
 }
