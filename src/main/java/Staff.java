@@ -9,8 +9,8 @@ public class Staff {
 		return staff.size() + 1;
 	}
 
-	public void addEmployee(Nurse nurse) {
-		staff.put(""+nurse.getIdNum(), nurse);
+	public void addEmployee(Employee name) {
+		staff.put(""+name.getIdNum(), name);
 		
 	}
 
