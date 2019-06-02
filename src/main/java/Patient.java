@@ -5,6 +5,8 @@ public class Patient extends Program{
 	
 	private int BLOOD_LEVEL = 20;
 	private int HEALTH_LEVEL = 10;
+	private String assignedNurseName = "";
+	private int assignedNurseId;
 	
 	public Patient(int id) {
 		setIdNum(id);
@@ -34,6 +36,17 @@ public class Patient extends Program{
 
 	public int getIdNum() {
 		return idNum;
+	}
+
+	public void setAssignedNurse(String name, int id) {
+		assignedNurseName = name;
+		assignedNurseId = id;
+	}
+	public String getAssignedNurseName() {
+		return assignedNurseName;
+	}
+	public int getAssignedNurseId() {
+		return assignedNurseId;
 	}
 
 

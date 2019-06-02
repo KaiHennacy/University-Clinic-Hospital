@@ -23,6 +23,17 @@ public class Nurse extends Medical{
 	}
 	public void addPatient(Patient pat) {
 		patients.put(""+pat.getIdNum(), pat);
+		pat.setAssignedNurse(getName(), getIdNum());
+	}
+	public void removePatient(String id) {
+		patients.remove(id);
+	}
+	public void resetAllPatients() {
+		for(Patient pat : patients.values()) {
+			pat.setAssignedNurse("", 0);
+			patients.remove(""+ pat.getIdNum());
+		}
+		
 	}
 
 }
