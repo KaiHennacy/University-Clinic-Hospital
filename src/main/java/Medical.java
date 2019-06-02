@@ -1,4 +1,3 @@
-
 public abstract class Medical extends Employee {
 
 	public Medical() {
