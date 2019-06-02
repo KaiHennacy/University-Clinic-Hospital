@@ -6,7 +6,16 @@ public class Receptionist extends Employee{
 		setSalary(SALARY);
 	}
 	final int SALARY = 45000;
-	private boolean isOnCall;
+	protected boolean isOnCall;
+	
+	public boolean isOnCall() {
+		return isOnCall = false;
+	}
+	
+	public void setCall(boolean onCall) {
+	isOnCall = onCall;
+	}
+	
 	
 	
 
