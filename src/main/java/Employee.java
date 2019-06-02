@@ -29,7 +29,9 @@ public abstract class Employee{
 	}
 	
 	public void pay() {
-		hasBeenPaid = true;
+		if(hasBeenPaid!=true) {
+			hasBeenPaid = true;
+		}else System.out.println("This employee has already been paid!");
 	}
 
 }
