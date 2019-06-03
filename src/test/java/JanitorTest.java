@@ -40,7 +40,7 @@ public class JanitorTest {
 		staff.addEmployee(ed);
 		int salary = ed.getSalary();
 
-		assertEquals(40000, ed.getSalary());
+		assertEquals(40000, salary);
 	}
 	@Test
 	public void canSeeIfJanitorHasBeenPaid() {
