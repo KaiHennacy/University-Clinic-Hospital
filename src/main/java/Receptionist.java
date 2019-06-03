@@ -23,13 +23,12 @@ public class Receptionist extends Employee {
 	public void tick() {
 		Random random = new Random();
 		boolean switchStatus = random.nextBoolean();
-		if(isOnCall()&&switchStatus) {
+		if (isOnCall() && switchStatus) {
 			setCall(false);
-		}
-		else if(!isOnCall()&&switchStatus) {
+		} else if (!isOnCall() && switchStatus) {
 			setCall(true);
 		}
-		
+
 	}
 
 }

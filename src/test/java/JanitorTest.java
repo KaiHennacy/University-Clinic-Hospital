@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -14,6 +13,7 @@ public class JanitorTest {
 
 		assertEquals(1, ed.getIdNum());
 	}
+
 	@Test
 	public void canCreate2JanitorsAndGetIdNumberOf2() {
 		Janitor ed = new Janitor("ed", staff.getId());
@@ -23,6 +23,7 @@ public class JanitorTest {
 
 		assertEquals(2, edison.getIdNum());
 	}
+
 	@Test
 	public void canTellJanitorsToSweepAndCheckIfTheyAreSweeping() {
 		Janitor ed = new Janitor("ed", staff.getId());
@@ -34,6 +35,7 @@ public class JanitorTest {
 		assertEquals(false, ed.isSweeping());
 		assertEquals(true, edison.isSweeping());
 	}
+
 	@Test
 	public void canGetJanitorSalary() {
 		Janitor ed = new Janitor("ed", staff.getId());
@@ -42,6 +44,7 @@ public class JanitorTest {
 
 		assertEquals(40000, ed.getSalary());
 	}
+
 	@Test
 	public void canSeeIfJanitorHasBeenPaid() {
 		Janitor ed = new Janitor("ed", staff.getId());
@@ -53,6 +56,5 @@ public class JanitorTest {
 
 		assertEquals(true, hasBeenPaid);
 	}
-	
-	
+
 }

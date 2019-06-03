@@ -144,8 +144,9 @@ public class Program {
 						reg.printTable();
 						System.out.println("Enter the ID number of the patient you would like to add to this nurse:");
 						userInput = in.nextLine();
-						if(reg.getPatient(userInput).getAssignedNurseId()!=0) {
-							staff.getNurse("" + reg.getPatient(userInput).getAssignedNurseId()).removePatient(userInput);
+						if (reg.getPatient(userInput).getAssignedNurseId() != 0) {
+							staff.getNurse("" + reg.getPatient(userInput).getAssignedNurseId())
+									.removePatient(userInput);
 						}
 						staff.getNurse(idHolder).addPatient(reg.getPatient(userInput));
 						System.out.println(staff.getNurse(idHolder).getName() + " now has "
@@ -165,7 +166,7 @@ public class Program {
 					case "6":
 						staff.getNurse(idHolder).resetAllPatients();
 						staff.fire(idHolder);
-						
+
 						break;
 					case "7":
 						exit = true;

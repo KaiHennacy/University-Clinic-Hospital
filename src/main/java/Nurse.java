@@ -47,10 +47,8 @@ public class Nurse extends Medical {
 		Random random = new Random();
 
 		for (Patient pat : patients.values()) {
-			boolean vitalSigns = random.nextBoolean();
 			boolean sick = random.nextBoolean();
-			boolean wantsToLeave = random.nextBoolean();
-			if (vitalSigns && !sick && wantsToLeave) {
+			if (!sick && pat.getHEALTH_LEVEL() >= 20) {
 				removePatient("" + pat.getIdNum());
 				pat.setToBeDischarged();
 			}

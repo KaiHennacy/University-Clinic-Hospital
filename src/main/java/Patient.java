@@ -8,7 +8,6 @@ public class Patient {
 	private int HEALTH_LEVEL = 10;
 	private String assignedNurseName = "";
 	private int assignedNurseId = 0;
-	
 
 	public Patient(int id) {
 		setIdNum(id);
@@ -57,14 +56,14 @@ public class Patient {
 		if (assignedNurseId == 0) {
 			HEALTH_LEVEL -= 1;
 		}
-		if(HEALTH_LEVEL < 0) {
+		if (HEALTH_LEVEL < 0) {
 			HEALTH_LEVEL = 0;
 		}
 	}
 
 	public void setToBeDischarged() {
 		toBeDischarged = true;
-		
+
 	}
 
 	public boolean getDischarge() {
