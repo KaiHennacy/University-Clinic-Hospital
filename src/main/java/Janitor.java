@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Janitor extends Employee{
 
 	final int SALARY = 40000;
@@ -13,6 +15,18 @@ public class Janitor extends Employee{
 	}
 	public void setSweeping(boolean sweep) {
 		isSweeping = sweep;
+	}
+	@Override
+	public void tick() {
+		Random random = new Random();
+		boolean switchStatus = random.nextBoolean();
+		if(isSweeping()&&switchStatus) {
+			setSweeping(false);
+		}
+		else if(!isSweeping()&&switchStatus) {
+			setSweeping(true);
+		}
+		
 	}
 
 }

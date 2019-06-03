@@ -28,5 +28,12 @@ public class PatientRegistry {
 	public Patient getPatient(String id) {
 		return patients.get(id);
 	}
+	public void tickAll() {
+		for(Patient pat : patients.values()) {
+			pat.tick();
+			if (pat.getDischarge())
+				removePatient("" + pat.getIdNum());
+		}
+	}
 	
 }

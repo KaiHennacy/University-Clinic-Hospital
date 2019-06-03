@@ -32,4 +32,7 @@ public class Doctor extends Medical {
 
 	}
 
+	@Override
+	public void tick() {}
+
 }

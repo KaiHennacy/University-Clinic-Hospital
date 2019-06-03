@@ -1,13 +1,15 @@
 
-public class Patient extends Program{
-	
+public class Patient {
+
 	protected int idNum;
-	
+	protected boolean toBeDischarged = false;
+
 	private int BLOOD_LEVEL = 20;
 	private int HEALTH_LEVEL = 10;
 	private String assignedNurseName = "";
-	private int assignedNurseId;
+	private int assignedNurseId = 0;
 	
+
 	public Patient(int id) {
 		setIdNum(id);
 	}
@@ -18,7 +20,7 @@ public class Patient extends Program{
 
 	public void subtractBloodLevel(int bloodDrawn) {
 		BLOOD_LEVEL -= bloodDrawn;
-		
+
 	}
 
 	public int getBLOOD_LEVEL() {
@@ -30,8 +32,8 @@ public class Patient extends Program{
 	}
 
 	public void addHealth(int healthAdded) {
-		HEALTH_LEVEL += healthAdded; 
-		
+		HEALTH_LEVEL += healthAdded;
+
 	}
 
 	public int getIdNum() {
@@ -42,12 +44,31 @@ public class Patient extends Program{
 		assignedNurseName = name;
 		assignedNurseId = id;
 	}
+
 	public String getAssignedNurseName() {
 		return assignedNurseName;
 	}
+
 	public int getAssignedNurseId() {
 		return assignedNurseId;
 	}
 
+	public void tick() {
+		if (assignedNurseId == 0) {
+			HEALTH_LEVEL -= 1;
+		}
+		if(HEALTH_LEVEL < 0) {
+			HEALTH_LEVEL = 0;
+		}
+	}
+
+	public void setToBeDischarged() {
+		toBeDischarged = true;
+		
+	}
+
+	public boolean getDischarge() {
+		return toBeDischarged;
+	}
 
 }

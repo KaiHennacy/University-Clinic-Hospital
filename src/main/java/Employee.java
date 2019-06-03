@@ -33,5 +33,6 @@ public abstract class Employee{
 			hasBeenPaid = true;
 		}else System.out.println("This employee has already been paid!");
 	}
+	public abstract void tick();
 
 }

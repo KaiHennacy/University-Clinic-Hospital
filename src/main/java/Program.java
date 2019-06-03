@@ -277,7 +277,10 @@ public class Program {
 				exit = true;
 				break;
 			}
+			staff.tickAll();
+			reg.tickAll();
 		} while (!exit);
 		System.out.println("Goodbye!");
+		in.close();
 	}
 }
