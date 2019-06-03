@@ -1,5 +1,5 @@
 
-public class Patient extends Program{
+public class Patient{
 	
 	protected int idNum;
 	

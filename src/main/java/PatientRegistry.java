@@ -8,7 +8,7 @@ public class PatientRegistry {
 	Map<String, Patient> patients = new HashMap <String, Patient>();
 	
 	public int getId() {
-		return patients.size() + 1;
+		return patients.size() + 1 + removedPatients;
 	}
 	
 	public void addPatient(Patient pat) {
@@ -16,6 +16,7 @@ public class PatientRegistry {
 	}
 	public void removePatient(String id) {
 		patients.remove(id);
+		removedPatients++;
 	}
 
 	public void printTable() {

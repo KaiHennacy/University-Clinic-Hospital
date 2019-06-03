@@ -4,9 +4,10 @@ import java.util.Map;
 
 public class Staff {
 	Map<String, Employee> staff = new HashMap<String, Employee>();
+	protected int fireCounter = 0;
 
 	public int getId() {
-		return staff.size() + 1;
+		return staff.size() + 1 + fireCounter;
 	}
 
 	public void addEmployee(Employee name) {
@@ -74,6 +75,7 @@ public class Staff {
 
 	public void fire(String id) {
 		staff.remove(id);
+		fireCounter++;
 		
 	}
 
